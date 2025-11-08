@@ -1,0 +1,183 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f4f7fb, #e8eef5);
+  padding: 20px;
+}
+
+/* ===== Card Container ===== */
+.container {
+  width: min(500px, 95%);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08),
+              inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* ===== Form Section ===== */
+form {
+  display: grid;
+  gap: 20px;
+}
+
+/* ===== Amount Box ===== */
+.amount {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.amount p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.amount input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  background: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.amount input:focus {
+  border-color: #6db5ff;
+  box-shadow: 0 0 5px #6db5ff66;
+}
+
+/* ===== Dropdown Section ===== */
+.dropdown {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  align-items: end;
+  gap: 15px;
+  padding: 12px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(200,200,200,0.4);
+  border-radius: 14px;
+}
+
+.from p,
+.to-label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* ===== Select Container ===== */
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+}
+
+.select-container img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Arrow button */
+.fa-arrow-right-arrow-left {
+  font-size: 18px;
+  color: #0077ff;
+  background: white;
+  padding: 14px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.fa-arrow-right-arrow-left:hover {
+  background: #eaf3ff;
+  border-color: #0077ff;
+  transform: rotate(180deg);
+}
+/* ===== Result Message ===== */
+.msg {
+  background: #f0faff;
+  color: #0077c8;
+  border: 1px solid #b8e4ff;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* ===== Button ===== */
+button {
+  width: 100%;
+  background: #0077ff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #005fd6;
+  box-shadow: 0 8px 18px rgba(0, 119, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .dropdown {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .fa-arrow-right-arrow-left {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}
